@@ -1,7 +1,13 @@
 
-  angular.module('Student',[]);
-  angular.module('Student').controller('BaseCtrl',['$scope','$http',function($scope){
-      $http.get('/student').then(funtion(response){
-        $scope.things=response.data;          
-      });       
+  angular.module('student',[]);
+  angular.module('student').controller('BaseCtrl',['$scope',function($scope){
+      $scope.things=[{
+         name:'soumik',
+         college:'NSEC',
+         stream:'CSE'
+      },{
+          name:'shakya',
+         college:'RCCIIT',
+         stream:'IT'  
+      }]     
   }]);
