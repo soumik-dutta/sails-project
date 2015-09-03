@@ -42,7 +42,14 @@ module.exports.routes = {
   'post /auth':{
       controller:'User',
       action:'process'
+  },
+  '/User/add':{
+      view:'user'   
+  },
+  '/User/all':{
+      view:'UserView'   
   }
+    
 
   /***************************************************************************
   *                                                                          *
