@@ -38,6 +38,10 @@ module.exports.routes = {
     // login page
   '/index':{
       view:'index'
+  },
+  'post /auth':{
+      controller:'User',
+      action:'process'
   }
 
   /***************************************************************************
