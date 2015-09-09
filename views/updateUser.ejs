@@ -1,6 +1,6 @@
-<form action='/User/create' method='post'>
-   Name:    <input type="text" name="name" data-ng-model='name' value="{{thing.name}}"><br>
-   College: <input type="text" name="college" data-ng-model='college' value="{{thing.college}}"><br/>
-   Stream:  <input type="text" name="stream" data-ng-model='stream' value="{{thing.stream}}"><br/>
+<form action='/User/update/<%= things.id %>' method='post'>
+   Name:    <input type="text" name="name" data-ng-model='name' value="<%= things.name %>" ><br>
+   College: <input type="text" name="college" data-ng-model='college' value="<%= things.college %>"><br/>
+   Stream:  <input type="text" name="stream" data-ng-model='stream' value="<%= things.stream %>"><br/>
        <input type="submit" value="update">
 </form>

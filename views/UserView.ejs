@@ -7,13 +7,11 @@
           <th>Straem</th>
         </tr>
         <tr ng-repeat="thing in things">
-          <td>{{thing.name}}</td>        
-          <td>{{thing.college}}</td>        
-          <td>{{thing.stream}}</td>  
+          <td>{{thing.name}}</td>
+          <td>{{thing.college}}</td>
+          <td>{{thing.stream}}</td>
           <td><a href='/User/destroy/{{thing.id}}'>delete</a></td>
           <td><a href='/User/update/{{thing.id}}'>update</a></td>
         </tr>
     </table>
 </div>
-
-

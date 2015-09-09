@@ -41,13 +41,13 @@ module.exports = {
       User.update({
         'id': id
       }, {
-        $set: {
           'name': name,
           'stream': stream,
           'college': college
-        }
-      }).exec(function(err, docs) {
-        sails.log(docs);
+        }).exec(function(err,doc) {
+        if(err)
+           throw err;
+        res.redirect('/User/all')
       });
     }
   },
@@ -58,10 +58,10 @@ module.exports = {
       'id': req.param('id')
     }).exec(function(err, doc) {
       res.view('updateUser',{things: {
-        id: doc.id,
-        name: doc.name,
-        college: doc.college,
-        stream: doc.stream
+        id: doc[0].id,
+        name: doc[0].name,
+        college: doc[0].college,
+        stream: doc[0].stream
       }});
     })
   }

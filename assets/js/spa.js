@@ -4,17 +4,5 @@
       $http.get('/User').success(function(response){
         $scope.things=response;
       })
-      
-      
-//      $scope.things=[{
-//         name:'soumik',
-//         college:'NSEC',
-//         stream:'CSE'
-//      },{
-//          name:'shakya',
-//         college:'RCCIIT',
-//         stream:'IT'  
-//      }]     
   }]);
-
-
+  
